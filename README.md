@@ -22,6 +22,14 @@ $ module load Anaconda3
 $ source activate /share/apps/conda_envs/tensorflow
 ```
 
+Before submitting the job, it may be necessary to edit the `list.sh`
+script to set a non-default Slurm bank account in the header block,
+e.g.:
+
+```
+#SBATCH --account=g.alex044
+```
+
 Assuming `tensorflow-gpu` is installed in the environment, change to the
 `list-gpu-devices/' directory and submit the job as follows, taking note
 of the reported job ID:
